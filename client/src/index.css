@@ -1,0 +1,213 @@
+html, body, #root {
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* Global Reset & Base Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f9f9f9;
+    color: #111;
+  }
+  
+  h1, h2, h3 {
+    margin: 0;
+  }
+  
+  /* Dashboard Layout */
+  .dashboard {
+    padding: 2rem;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+  }
+  
+  /* Header */
+  .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .dashboard-header h1 {
+    font-size: 2.25rem;
+    font-weight: bold;
+  }
+  
+  .dashboard-header button {
+    background-color: #1a73e8;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .dashboard-header button:hover {
+    background-color: #155ab6;
+  }
+  
+  /* Filters */
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .filters input,
+  .filters select {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+  
+  /* Columns Layout */
+  .task-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  /* Column */
+  .task-column {
+    background-color: #f1f1f1;
+    padding: 1rem;
+    border-radius: 6px;
+    min-height: 240px;
+  }
+  
+  /* Task Card */
+  .task-card {
+    background-color: #fff;
+    padding: 0.75rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 0.5rem;
+  }
+  
+  .task-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .task-card p {
+    font-size: 0.875rem;
+    color: #555;
+  }
+  
+  .task-card .priority {
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+  }
+  
+  .task-card .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    margin-top: 0.4rem;
+  }
+  
+  .task-card .tag {
+    background-color: #d0e6ff;
+    color: #1a73e8;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+  }
+  
+  .task-card .actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .task-card .actions button {
+    border: none;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    cursor: pointer;
+  }
+  
+  .task-card .actions .edit-btn {
+    background-color: #f0ad4e;
+    color: white;
+  }
+  
+  .task-card .actions .delete-btn {
+    background-color: #d9534f;
+    color: white;
+  }
+  
+  /* Modal */
+  .modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  }
+  
+  .modal h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .modal form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .modal form input,
+  .modal form textarea,
+  .modal form select {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    width: 100%;
+  }
+  
+  .modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+  }
+  
+  .modal-actions button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .modal-actions .cancel-btn {
+    background-color: #e0e0e0;
+    color: #333;
+  }
+  
+  .modal-actions .create-btn {
+    background-color: #1a73e8;
+    color: white;
+  }
+  

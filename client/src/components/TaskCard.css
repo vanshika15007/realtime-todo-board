@@ -1,0 +1,214 @@
+.task-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: background 0.3s ease;
+  }
+  
+  .task-card:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .task-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .priority {
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    color: #fff;
+    text-transform: capitalize;
+  }
+  
+  .priority.low {
+    background-color: #4caf50;
+  }
+  
+  .priority.medium {
+    background-color: #ff9800;
+  }
+  
+  .priority.high {
+    background-color: #f44336;
+  }
+  
+  .description {
+    margin: 0.5rem 0;
+  }
+  
+  .tags {
+    margin: 0.5rem 0;
+  }
+  
+  .tag {
+    background: #e0e0e0;
+    border-radius: 3px;
+    padding: 0.2rem 0.4rem;
+    margin-right: 0.4rem;
+    font-size: 0.75rem;
+  }
+  
+  .due-date {
+    font-size: 0.8rem;
+    color: #555;
+  }
+  
+  .task-card-actions {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .edit-btn,
+  .delete-btn,
+  .smart-assign-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+  }
+  
+  .edit-btn:hover {
+    color: #1976d2;
+    background-color: #e3f2fd;
+  }
+  
+  .smart-assign-btn:hover {
+    color: #7b1fa2;
+    background-color: #f3e5f5;
+  }
+  
+  .delete-btn:hover {
+    color: #d32f2f;
+    background-color: #ffebee;
+  }
+
+.card-low {
+  background: #e8f5e9 !important;   /* Light green */
+  border-left: 6px solid #43a047;
+}
+.card-medium {
+  background: #fff8e1 !important;   /* Light yellow */
+  border-left: 6px solid #ffa000;
+}
+.card-high {
+  background: #ffebee !important;   /* Light red */
+  border-left: 6px solid #e53935;
+}
+
+.modern-card {
+  position: relative;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(25, 118, 210, 0.08);
+  padding: 1.5rem 1.25rem 1.25rem 1.25rem;
+  margin-bottom: 1.5rem;
+  transition: box-shadow 0.2s, transform 0.2s;
+  background: #fff;
+  min-width: 260px;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.modern-card:hover {
+  box-shadow: 0 8px 32px rgba(25, 118, 210, 0.16);
+  transform: translateY(-2px) scale(1.01);
+}
+
+.priority-badge-container {
+  position: absolute;
+  top: 1.1rem;
+  right: 1.1rem;
+  z-index: 2;
+}
+.priority-badge {
+  display: inline-block;
+  padding: 0.3rem 1.1rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+.priority-badge.low {
+  background: #43a047;
+}
+.priority-badge.medium {
+  background: #ffa000;
+}
+.priority-badge.high {
+  background: #e53935;
+}
+
+.task-card-content {
+  margin-top: 0.5rem;
+}
+.task-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+.description {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+.tags {
+  margin-bottom: 0.5rem;
+}
+.tag {
+  background: #e3eafc;
+  color: #1976d2;
+  border-radius: 999px;
+  padding: 0.2rem 0.7rem;
+  margin-right: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 0.2rem;
+}
+.due-date {
+  font-size: 0.95rem;
+  color: #7b809a;
+  margin-bottom: 0.7rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.task-card-actions {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.7rem;
+}
+.edit-btn, .delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.3rem 0.8rem;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+.edit-btn:hover {
+  color: #1976d2;
+  background: #e3eafc;
+}
+.delete-btn:hover {
+  color: #e53935;
+  background: #ffebee;
+}
+  
