@@ -1,12 +1,16 @@
 import { io } from 'socket.io-client';
 
-const socket = io('/', {
-  withCredentials: true,
-  autoConnect: true,
-  reconnection: true,
-  reconnectionDelay: 1000,
-  reconnectionAttempts: 5
-});
+const socket = io(
+  import.meta.env.VITE_SOCKET_URL || 'http://localhost:5001',
+  {
+    withCredentials: true,
+    autoConnect: true,
+    reconnection: true,
+    reconnectionDelay: 1000,
+    reconnectionAttempts: 5,
+    transports: ['websocket', 'polling'],
+  }
+);
 
 socket.on('connect', () => {
   console.log('🔗 Connected to server');
