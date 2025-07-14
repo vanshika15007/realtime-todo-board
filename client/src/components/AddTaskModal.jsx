@@ -64,11 +64,11 @@ const AddTaskModal = ({ onClose, editTask, tasks = [] }) => {
     try {
       if (editTask) {
         payload.version = editTask.version;
-        await axios.put(`/api/tasks/${editTask._id}`, payload, {
+        await axios.put(`/tasks/${editTask._id}`, payload, {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
         });
       } else {
-        await axios.post('/api/tasks', payload, {
+        await axios.post('/tasks', payload, {
           headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
         });
       }
@@ -100,7 +100,7 @@ const AddTaskModal = ({ onClose, editTask, tasks = [] }) => {
     // Remove version to force overwrite
     delete payload.version;
     try {
-      await axios.put(`/api/tasks/${editTask._id}`, payload, {
+      await axios.put(`/tasks/${editTask._id}`, payload, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
       });
       setShowConflictModal(false);
@@ -122,7 +122,7 @@ const AddTaskModal = ({ onClose, editTask, tasks = [] }) => {
     // Remove version to force update
     delete merged.version;
     try {
-      await axios.put(`/api/tasks/${editTask._id}`, merged, {
+      await axios.put(`/tasks/${editTask._id}`, merged, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
       });
       setShowConflictModal(false);
@@ -135,11 +135,11 @@ const AddTaskModal = ({ onClose, editTask, tasks = [] }) => {
   };
 
   return (
-    <div className="modal-overlay">
+    <div className="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
       <div className="modal">
-        <h3>{editTask ? 'Edit Task' : 'Add New Task'}</h3>
+        <h3 id="modal-title">{editTask ? 'Edit Task' : 'Add New Task'}</h3>
         {error && <div className="error-message">{error}</div>}
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} aria-label="Task Form">
           <input
             type="text"
             placeholder="Title"

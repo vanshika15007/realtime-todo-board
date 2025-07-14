@@ -28,7 +28,7 @@ const Dashboard = () => {
 
   const fetchTasks = async () => {
     try {
-      const res = await axios.get('/api/tasks', {
+      const res = await axios.get('/tasks', {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
       });
       setTasks(res.data);
@@ -44,7 +44,7 @@ const Dashboard = () => {
 
     const updated = { ...task, status: destination.droppableId };
     try {
-      await axios.put(`/api/tasks/${draggableId}`, updated, {
+      await axios.put(`/tasks/${draggableId}`, updated, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
       });
     } catch (err) {

@@ -13,7 +13,7 @@ const Login = () => {
     e.preventDefault();
     setError('');
     try {
-      const res = await axios.post('/api/auth/login', { email, password });
+      const res = await axios.post('/auth/login', { email, password });
       localStorage.setItem('token', res.data.token);
       navigate('/dashboard');
     } catch (err) {
@@ -61,7 +61,7 @@ const Login = () => {
         </div>
         <div style={{ marginTop: '0.7rem' }}>
           Don't have an account?{' '}
-          <Link to="/signup" className="toggle-link">Sign Up</Link>
+          <Link to="/register" className="toggle-link">Sign Up</Link>
         </div>
       </div>
     </div>

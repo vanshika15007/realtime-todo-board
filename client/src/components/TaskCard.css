@@ -111,7 +111,8 @@
   box-shadow: 0 4px 16px rgba(25, 118, 210, 0.08);
   padding: 1.5rem 1.25rem 1.25rem 1.25rem;
   margin-bottom: 1.5rem;
-  transition: box-shadow 0.2s, transform 0.2s;
+  transition: box-shadow 0.2s, transform 0.2s, transform 0.5s cubic-bezier(0.4, 0.2, 0.2, 1);
+  backface-visibility: hidden;
   background: #fff;
   min-width: 260px;
   min-height: 120px;
@@ -122,6 +123,9 @@
 .modern-card:hover {
   box-shadow: 0 8px 32px rgba(25, 118, 210, 0.16);
   transform: translateY(-2px) scale(1.01);
+}
+.modern-card.flipped {
+  transform: rotateY(180deg) scale(1.01);
 }
 
 .priority-badge-container {

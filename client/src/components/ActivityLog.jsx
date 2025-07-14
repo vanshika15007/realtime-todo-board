@@ -9,7 +9,7 @@ const ActivityLog = () => {
 
   const fetchActivities = async () => {
     try {
-      const response = await axios.get('/api/activities', {
+      const response = await axios.get('/activities', {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
       });
       setActivities(response.data);
@@ -61,9 +61,9 @@ const ActivityLog = () => {
   }
 
   return (
-    <div className="activity-log">
+    <div className="activity-log" role="region" aria-label="Activity Log Panel">
       <h3>📋 Activity Log</h3>
-      <div className="activities-list">
+      <div className="activities-list" role="list" aria-label="Recent Activities">
         {activities.length === 0 ? (
           <div className="no-activities">No activities yet</div>
         ) : (

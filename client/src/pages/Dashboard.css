@@ -268,4 +268,8 @@
     box-sizing: border-box !important;
   }
 }
+
+.kanban-board .text-gray-400 {
+  color: #111 !important;
+}
   
