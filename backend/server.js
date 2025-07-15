@@ -14,7 +14,8 @@ const app = express();
 const server = http.createServer(app);
 const allowedOrigins = [
   'http://localhost:5173',
-  'https://your-deployed-frontend.netlify.app', // <-- replace with your actual deployed frontend URL
+  'https://realtime-todo-board.netlify.app',
+  'http://realtime-todo-board.netlify.app'
 ];
 
 const io = new Server(server, {
