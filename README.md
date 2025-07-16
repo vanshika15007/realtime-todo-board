@@ -121,7 +121,7 @@ npm run dev
 - This prevents accidental overwrites and ensures collaborative editing
 
 ---
- live: https://realtime-todo-board.netlify.app/
+ live app: https://realtime-todo-board.netlify.app/
  Demo vide: https://www.youtube.com/watch?v=uXSIdGuO-ds
 
 ## License
